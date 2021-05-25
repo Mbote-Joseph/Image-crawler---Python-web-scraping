@@ -32,7 +32,7 @@ dt_string = now.strftime("%B_%d_%Y_%I:%M:%S_%p")
 # Generate and save only up to 10 images
 i = 1
 for index, img_link in enumerate(links):
-    if i <= 10:
+    if i <= 20:
         print(f'Generating file {i}.jpg')
         img_data = r.get(img_link).content
         with open("photos/" + str(index + 1) + '_' + dt_string + '.jpg', 'wb+') as f:
